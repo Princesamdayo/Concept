@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Brand-It Concept</title>
+
+    <link rel="stylesheet" href="gallery.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #fff6f2;
+    --pink: #e85d88;
+    --magenta: #b41455;
+    --dark: #8e1245;
+    --burgundy: #42152a;
+    --gold: #d8a84e;
+    --gray: #666;
+    --white: #fff;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #fffaf8;
+    color: var(--burgundy);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    background: var(--dark);
+    color: white;
+
+    padding: 10px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+}
+
+.top-bar span {
+    margin-right: 20px;
+}
+
+.top-bar i {
+    color: #ffd8e4;
+    margin-right: 5px;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 12px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    min-height: 95px;
+
+    padding: 12px 5%;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    border-bottom: 1px solid #f1d9e2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    margin-right: auto;
+}
+
+.logo-symbol {
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid var(--pink);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--magenta);
+
+    margin-right: 10px;
+
+    font-size: 24px;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+
+    color: var(--magenta);
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.brand-concept {
+    font-family: "Playfair Display", serif;
+
+    color: var(--pink);
+
+    text-align: center;
+
+    font-size: 19px;
+}
+
+.logo small {
+    color: var(--magenta);
+
+    font-size: 10px;
+
+    font-style: italic;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 23px;
+}
+
+.navbar nav a {
+    color: var(--burgundy);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.navbar nav a:hover,
+.navbar nav .active {
+    color: var(--magenta);
+}
+
+.quote-button {
+    padding: 13px 23px;
+
+    background: var(--magenta);
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.gallery-hero {
+    height: 390px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8e1245,
+            #e85d88
+        );
+
+    overflow: hidden;
+}
+
+.gallery-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    left: -200px;
+    top: -250px;
+}
+
+.gallery-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    right: -200px;
+    bottom: -250px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(66,21,42,.15);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+}
+
+.hero-content span {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+}
+
+.hero-content h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 65px;
+
+    margin: 10px 0;
+}
+
+.hero-content p {
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.gallery-intro {
+    text-align: center;
+
+    padding: 80px 20px 40px;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.gallery-intro > span {
+    color: var(--pink);
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+.gallery-intro h2 {
+    font-family: "Playfair Display", serif;
+
+    color: var(--burgundy);
+
+    font-size: 42px;
+
+    margin: 12px 0;
+}
+
+.gold-line {
+    width: 60px;
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: 15px auto;
+}
+
+.gallery-intro p {
+    color: var(--gray);
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.gallery-filters {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin: 20px auto 45px;
+
+    padding: 0 20px;
+}
+
+.filter-btn {
+    border: 1px solid #e8b8c8;
+
+    background: white;
+
+    color: var(--burgundy);
+
+    padding: 11px 22px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--magenta);
+
+    border-color: var(--magenta);
+
+    color: white;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    padding: 0 6% 90px;
+}
+
+.gallery-grid {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.gallery-item {
+    height: 350px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background: #eee;
+
+    box-shadow:
+        0 8px 25px rgba(66,21,42,.08);
+
+    transition: .4s;
+}
+
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(5) {
+    height: 430px;
+}
+
+.gallery-item img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .6s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   IMAGE CAPTION
+========================= */
+
+.gallery-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 55px 22px 22px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(30,5,18,.9)
+        );
+
+    transform: translateY(5px);
+
+    transition: .3s;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+.gallery-caption span {
+    color: #ffd5e1;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.gallery-caption h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-top: 5px;
+}
+
+.gallery-caption i {
+    position: absolute;
+
+    right: 22px;
+    bottom: 25px;
+
+    width: 40px;
+    height: 40px;
+
+    background: white;
+
+    color: var(--magenta);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.gallery-cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--dark),
+            var(--magenta),
+            var(--pink)
+        );
+}
+
+.gallery-cta span {
+    color: #ffe1ea;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+.gallery-cta h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    margin: 15px 0;
+}
+
+.gallery-cta p {
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.cta-buttons a {
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: var(--magenta);
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #2b0b1b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px 25px;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+
+    color: var(--pink);
+
+    font-size: 30px;
+}
+
+.footer-logo span {
+    color: #ffd5e1;
+}
+
+footer > p {
+    color: #e6cbd4;
+
+    margin: 8px 0 25px;
+}
+
+.footer-contact {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.footer-contact i {
+    color: var(--pink);
+
+    margin-right: 6px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    padding-top: 20px;
+
+    color: #a9959d;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .top-bar {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .top-bar span {
+        display: block;
+
+        margin: 4px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .navbar nav {
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        width: 100%;
+
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        white-space: nowrap;
+    }
+
+    .quote-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .gallery-hero {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .gallery-intro h2 {
+        font-size: 34px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(5) {
+        height: 350px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 100%;
+  left: -20px;
+
+  width: 240px;
+
+  background: white;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,.12);
+
+  border-radius: 10px;
+
+  padding: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition: .3s;
+
+  z-index: 20;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+
+  padding: 11px 14px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: var(--light-pink);
+
+  color: var(--magenta);
+}
+</style>
+
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <div>
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            (832) 744-0603
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            pasharon7@gmail.com
+        </span>
+    </div>
+
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <div class="logo-symbol">
+            <i class="fa-solid fa-spa"></i>
+        </div>
+
+        <div>
+
+            <div class="brand-name">
+                Brand-It
+            </div>
+
+            <div class="brand-concept">
+                Concept
+            </div>
+
+            <small>
+                ...style • comfort • excellence...
+            </small>
+
+        </div>
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="About Brand it.html">
+            About Us
+        </a>
+
+       <div class="dropdown">
+        <a href="Our Service.html">
+          Our Services
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="dropdown-menu">
+          <a href="Event Management.html">Event Management</a>
+          <a href="Perfumery.html">Perfumery</a>
+          <a href="Bedding and Duvet.html">Bedding & Duvet</a>
+          <a href="Interior Decor.html">Interior Decor</a>
+          <a href="Blind and curtain.html">Blinds & Curtains</a>
+          <a href="Cleaning.html">Cleaning Services</a>
+          <a href="Medical Management.html">Medical Management</a>
+          <a href="Environmental Management.html">Environmental Management</a>
+          <a href="House Keeping.html">House Keeping</a>
+          <a href="air.html">Air Bnb Home</a>
+        </div>
+      </div>
+
+        <a href="Gallery.html" class="active">
+            Gallery
+        </a>
+
+        <a href="Blog.html">
+            Blog
+        </a>
+
+        <a href="Contact Brand it.html">
+            Contact Us
+        </a>
+
+    </nav>
+
+
+    <a href="Quotes.html" class="quote-button">
+        Get a Quote
+    </a>
+
+</header>
+
+
+<!-- =========================
+     GALLERY HERO
+========================= -->
+
+<section class="gallery-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span>
+            OUR WORK
+        </span>
+
+        <h1>
+            Gallery
+        </h1>
+
+        <p>
+            A glimpse of style, comfort and excellence.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY INTRO
+========================= -->
+
+<section class="gallery-intro">
+
+    <span>
+        BRAND-IT CONCEPT
+    </span>
+
+    <h2>
+        Explore Our Work
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p>
+        Take a look at some of the beautiful experiences,
+        spaces and services created by Brand-It Concept.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FILTER BUTTONS
+========================= -->
+
+<div class="gallery-filters">
+
+    <button class="filter-btn active"
+            data-filter="all">
+        All
+    </button>
+
+    <button class="filter-btn"
+            data-filter="events">
+        Events
+    </button>
+
+    <button class="filter-btn"
+            data-filter="decor">
+        Interior Décor
+    </button>
+
+    <button class="filter-btn"
+            data-filter="bedding">
+        Bedding
+    </button>
+
+    <button class="filter-btn"
+            data-filter="services">
+        Services
+    </button>
+
+</div>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery-section">
+
+    <div class="gallery-grid">
+
+
+        <!-- IMAGE 1 -->
+
+        <div class="gallery-item events">
+
+            <img src="event.avif"
+                 alt="Elegant Event Decoration">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Event Management
+                </span>
+
+                <h3>
+                    Elegant Celebrations
+                </h3>
+
+        
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 2 -->
+
+        <div class="gallery-item decor">
+
+            <img src="interior.avif"
+                 alt="Luxury Interior Decoration">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Interior Décor
+                </span>
+
+                <h3>
+                    Beautiful Interiors
+                </h3>
+
+            
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 3 -->
+
+        <div class="gallery-item events">
+
+            <img src="wedding.avif"
+                 alt="Wedding Event">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Event Management
+                </span>
+
+                <h3>
+                    Memorable Moments
+                </h3>
+
+              
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 4 -->
+
+        <div class="gallery-item bedding">
+
+            <img src="bedding2.avif"
+                 alt="Luxury Bedding">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Bedding & Duvet
+                </span>
+
+                <h3>
+                    Comfort & Style
+                </h3>
+
+               
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 5 -->
+
+        <div class="gallery-item decor">
+
+            <img src="interior2.avif"
+                 alt="Interior Design">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Interior Décor
+                </span>
+
+                <h3>
+                    Modern Living
+                </h3>
+
+          
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 6 -->
+
+        <div class="gallery-item services">
+
+            <img src="cleaning.avif"
+                 alt="Professional Cleaning">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Cleaning Services
+                </span>
+
+                <h3>
+                    Professional Care
+                </h3>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 7 -->
+
+        <div class="gallery-item decor">
+
+            <img src="blind and curtain.avif"
+                 alt="Curtains and Blinds">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Blinds & Curtains
+                </span>
+
+                <h3>
+                    Elegant Finishing
+                </h3>
+
+               
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 8 -->
+
+        <div class="gallery-item services">
+
+            <img src="house keeping.avif"
+                 alt="Professional Housekeeping">
+
+            <div class="gallery-caption">
+
+                <span>
+                    Housekeeping
+                </span>
+
+                <h3>
+                    Clean & Comfortable
+                </h3>
+
+                
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="gallery-cta"
+         id="contact">
+
+    <div>
+
+        <span>
+            LET'S CREATE SOMETHING BEAUTIFUL
+        </span>
+
+        <h2>
+            Have a Project in Mind?
+        </h2>
+
+        <p>
+            Let Brand-It Concept bring your vision
+            to life with style and excellence.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="tel:+18327440603">
+                <i class="fa-solid fa-phone"></i>
+                Call Us
+            </a>
+
+            <a href="mailto:pasharon7@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                Email Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Brand-It <span>Concept</span>
+    </div>
+
+    <p>
+        ...style • comfort • excellence...
+    </p>
+
+    <div class="footer-contact">
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            (832) 744-0603
+        </span>
+
+        <span>
+        <i class="fa-solid fa-certificate"></i>
+        Fling-B651642
+      </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            pasharon7@gmail.com
+        </span>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Brand-It Concept. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+
+const galleryItems =
+document.querySelectorAll(".gallery-item");
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filter =
+        button.getAttribute("data-filter");
+
+
+        galleryItems.forEach(item => {
+
+            if (
+                filter === "all" ||
+                item.classList.contains(filter)
+            ) {
+
+                item.style.display = "block";
+
+            } else {
+
+                item.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Management | Brand-It Concept</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<style>
+
+   /* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #42152a;
+    background: #fffaf7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ /* Back Navigation */
+        .article-nav {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f1d8e3;
+
+    box-shadow: 0 3px 15px rgba(80, 20, 50, 0.08);
+}
+
+.back-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #a7194b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-blog:hover {
+    background: #7d1238;
+    transform: translateX(-4px);
+}
+
+.nav-title {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #a7194b;
+}
+/* ================================
+   EVENT HERO
+================================ */
+
+.event-hero {
+    min-height: 560px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("event.avif");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.event-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(66, 21, 42, .80),
+            rgba(180, 20, 85, .65)
+        );
+}
+
+.event-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 30px;
+
+    color: white;
+}
+
+.small-title {
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #f9d9e3;
+}
+
+.event-hero h1 {
+    font-family: Georgia, serif;
+
+    font-size: 65px;
+
+    margin: 18px 0;
+}
+
+.event-hero p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.event-button {
+    display: inline-block;
+
+    background: #b41455;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.event-button:hover {
+    background: #8e1245;
+
+    transform: translateY(-3px);
+}
+
+       /* Hero */
+        .article-hero {
+            height: 420px;
+            background:
+                linear-gradient(rgba(80, 20, 55, 0.55),
+                rgba(80, 20, 55, 0.55)),
+                url("event.avif") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .article-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .article-hero p {
+            font-size: 18px;
+        }
+
+
+/* ================================
+   INTRODUCTION
+================================ */
+
+.event-intro {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    text-align: center;
+}
+
+.section-heading span {
+    color: #e85d88;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+
+    color: #42152a;
+
+    font-size: 40px;
+
+    margin: 12px 0;
+}
+
+.heading-line {
+    width: 65px;
+
+    height: 3px;
+
+    background: #d8a84e;
+
+    margin: 15px auto 25px;
+}
+
+.event-intro p {
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   SERVICES
+================================ */
+
+.event-services {
+    background: #fff0f3;
+
+    padding: 80px 5%;
+}
+
+.event-services .section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.event-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 35px rgba(66, 21, 42, .08);
+
+    transition: .3s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(180, 20, 85, .15);
+}
+
+.event-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #fce1e9;
+
+    color: #b41455;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.event-card h3 {
+    font-family: Georgia, serif;
+
+    color: #42152a;
+
+    margin: 20px 0 10px;
+
+    font-size: 22px;
+}
+
+.event-card p {
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   WHY CHOOSE US
+================================ */
+
+.why-event {
+    display: grid;
+
+    
+
+    min-height: 550px;
+}
+
+
+
+.why-content {
+    padding: 80px 8%;
+
+    background: white;
+}
+
+.why-content > span {
+    color: #e85d88;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.why-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    color: #42152a;
+
+    margin: 15px 0 20px;
+}
+
+.why-content p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.benefits {
+    display: grid;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.benefits div {
+    color: #42152a;
+
+    font-weight: 600;
+}
+
+.benefits i {
+    color: #b41455;
+
+    margin-right: 8px;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.event-cta {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8e1245,
+            #b41455,
+            #e85d88
+        );
+}
+
+.event-cta h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.event-cta p {
+    margin-bottom: 30px;
+
+    font-size: 17px;
+}
+
+.white-button {
+    background: white;
+
+    color: #b41455;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #42152a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #f5dbe3;
+
+    margin: 10px 0;
+}
+
+.footer-contact {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 25px 0;
+}
+
+.footer-contact i {
+    color: #e85d88;
+
+    margin-right: 7px;
+}
+
+.copyright {
+    font-size: 13px;
+
+    opacity: .8;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .event-hero h1 {
+        font-size: 45px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+
+   
+}
+
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-hero {
+        min-height: 500px;
+    }
+
+    .event-hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .why-content h2 {
+        font-size: 32px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+</style>
+
+<body>
+
+ <!-- Back to Blog -->
+    <header class="article-nav">
+
+        <a href="Our Service.html" class="back-blog">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Our Services
+        </a>
+
+        <div class="nav-title">
+            Brand-It Concept
+        </div>
+
+    </header>
+
+
+
+ <!-- Hero Section -->
+    <section class="article-hero">
+        <div>
+            <h1>Event Management</h1>
+            <p>Creating sustainable solutions with style, comfort,
+            creativity and exceptional service.</p>
+        </div>
+    </section>
+
+
+<!-- INTRODUCTION -->
+<section class="event-intro">
+
+    <div class="section-heading">
+        <span>WHAT WE DO</span>
+
+        <h2>
+            Professional Event Management
+        </h2>
+
+        <div class="heading-line"></div>
+    </div>
+
+    <p>
+        At Brand-It Concept, we provide professional event management
+        services designed to make your special occasion memorable,
+        organized and stress-free. From planning and decoration to
+        coordination and execution, our team pays attention to every
+        detail.
+    </p>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="event-services" id="event-services">
+
+    <div class="section-heading">
+        <span>OUR SERVICES</span>
+
+        <h2>
+            Everything You Need For Your Event
+        </h2>
+
+        <div class="heading-line"></div>
+    </div>
+
+
+    <div class="event-grid">
+
+        <!-- SERVICE 1 -->
+        <div class="event-card">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <h3>Event Planning</h3>
+
+            <p>
+                Complete planning and coordination to ensure
+                your event runs smoothly from beginning to end.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 2 -->
+        <div class="event-card">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+
+            <h3>Parties & Celebrations</h3>
+
+            <p>
+                Beautifully organized birthdays, anniversaries,
+                celebrations and special occasions.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 3 -->
+        <div class="event-card">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-ring"></i>
+            </div>
+
+            <h3>Weddings</h3>
+
+            <p>
+                Elegant wedding planning, coordination and
+                decoration tailored to your vision.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 4 -->
+        <div class="event-card">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <h3>Corporate Events</h3>
+
+            <p>
+                Professional corporate meetings, conferences,
+                launches and business events.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 5 -->
+        <div class="event-card">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <h3>Event Decoration</h3>
+
+            <p>
+                Stylish decorations, table settings, backdrops
+                and beautiful event environments.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 6 -->
+        <div class="event-card">
+
+            <div class="event-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h3>Event Coordination</h3>
+
+            <p>
+                Professional coordination on the day of your
+                event so everything stays organized.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="why-event">
+
+    
+
+    <div class="why-content">
+
+        <span>WHY CHOOSE BRAND-IT?</span>
+
+        <h2>
+            We Turn Your Ideas Into Memorable Experiences
+        </h2>
+
+        <p>
+            Your event deserves careful planning and attention
+            to detail. We work closely with our clients to
+            understand their vision and deliver an experience
+            that reflects their personality and expectations.
+        </p>
+
+        <div class="benefits">
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Creative Event Concepts
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Professional Coordination
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Attention To Detail
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Reliable Service
+            </div>
+
+        </div>
+
+        <a href="Contact Brand it.html" class="event-button">
+            Book Your Event
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="event-cta">
+
+    <h2>
+        Let's Make Your Next Event Extraordinary
+    </h2>
+
+    <p>
+        Tell us about your event and let Brand-It Concept
+        help bring your vision to life.
+    </p>
+
+    <a href="Quotes.html" class="event-button white-button">
+        Get a Quote
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>Brand-It Concept</h2>
+
+    <p>
+        Style • Comfort • Excellence
+    </p>
+
+    <div class="footer-contact">
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            (832) 744-0603
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            pasharon7@gmail.com
+        </span>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Brand-It Concept. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

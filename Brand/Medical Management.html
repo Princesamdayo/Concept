@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Why Professional Medical Management | Brand-It Concept</title>
+
+    <link rel="stylesheet" href="article.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<style>
+
+    /* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffafc;
+    color: #3d2732;
+    line-height: 1.7;
+}
+
+
+ .article-hero {
+            height: 420px;
+
+            background:
+                linear-gradient(
+                    rgba(70, 30, 50, 0.50),
+                    rgba(70, 30, 50, 0.50)
+                ),
+                url("Medical.webp")
+                center/cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 30px;
+        }
+
+        .article-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .article-hero p {
+            font-size: 18px;
+        }
+
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.article-nav {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f1d8e3;
+
+    box-shadow: 0 3px 15px rgba(80, 20, 50, 0.08);
+}
+
+.back-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #a7194b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-blog:hover {
+    background: #7d1238;
+    transform: translateX(-4px);
+}
+
+.nav-title {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #a7194b;
+}
+
+
+/* NAV LINKS */
+
+.navbar nav {
+    display: flex;
+    gap: 22px;
+}
+
+.navbar nav a {
+    color: #442b36;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #c2185b;
+}
+
+
+/* QUOTE BUTTON */
+
+.quote-btn {
+    background: #9d174d;
+
+    color: white;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.quote-btn:hover {
+    background: #75113b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ARTICLE IMAGE
+========================= */
+
+.article-hero {
+    width: 100%;
+
+    padding: 55px 6% 0;
+}
+
+.article-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 1150px;
+
+    height: 500px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* DARK OVERLAY */
+
+.article-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(40, 15, 30, 0.65)
+    );
+}
+
+
+/* CATEGORY */
+
+.category {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    z-index: 2;
+
+    background: #70213e;
+
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
+
+.article-container {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 60px auto 100px;
+}
+
+.date {
+    color: #a65b77;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+.article-container h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    line-height: 1.15;
+
+    color: #3d2430;
+
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+
+    color: #75616a;
+
+    max-width: 750px;
+
+    margin-bottom: 45px;
+}
+
+.article-content {
+    font-size: 17px;
+
+    color: #57464e;
+}
+
+.article-content p {
+    margin-bottom: 25px;
+}
+
+.article-content h2 {
+    font-family: Georgia, serif;
+
+    color: #7d2147;
+
+    font-size: 30px;
+
+    margin: 45px 0 15px;
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 35px;
+
+    padding: 13px 23px;
+
+    background: #a7194b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: #7d1238;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #4b1830;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-logo h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #f5b1c9;
+}
+
+.footer-logo span {
+    color: #f7d8e2;
+
+    font-family: Georgia, serif;
+}
+
+.footer-logo p {
+    margin: 10px 0 25px;
+
+    font-style: italic;
+
+    color: #e6c5d2;
+}
+
+footer > p {
+    font-size: 14px;
+
+    color: #d9b7c5;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .article-image {
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        justify-content: center;
+    }
+
+    .quote-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .article-hero {
+        padding: 25px 15px 0;
+    }
+
+    .article-image {
+        height: 300px;
+
+        border-radius: 12px;
+    }
+
+    .category {
+        top: 18px;
+        left: 18px;
+    }
+
+   /* Article */
+        .article-container {
+            max-width: 900px;
+            margin: 70px auto;
+            padding: 0 25px;
+        }
+
+        .date {
+            color: #a83c6d;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .article-container h2 {
+            font-family: Georgia, serif;
+            font-size: 35px;
+            color: #5c2344;
+            margin-bottom: 20px;
+        }
+
+        .article-container p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+}
+</style>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="article-nav">
+
+        <a href="Our Service.html" class="back-blog">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Our Services
+        </a>
+
+        <div class="nav-title">
+            Brand-It Concept
+        </div>
+
+    </header>
+
+
+    <!-- ARTICLE HERO -->
+
+    <section class="article-hero">
+
+        <div>
+
+            <h1>
+               Medical Management Services
+            </h1>
+
+            <p>
+                Professional medical management services for hospitals, clinics, and healthcare facilities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARTICLE -->
+
+    <main class="article-container">
+
+        <p class="date">
+            August 9, 2026
+        </p>
+
+        <h1>
+            Why Professional Medical Management Matters
+        </h1>
+
+        <p class="intro">
+            Effective medical management ensures optimal patient care, compliance, and operational efficiency.
+        </p>
+
+
+        <div class="article-content">
+
+            <p>
+                Professional medical management is an important part of
+                maintaining a high-quality healthcare environment. Whether it is a hospital,
+                clinic, or healthcare facility, effective management ensures
+                that patients receive the best possible care.
+                A well-managed medical environment creates a positive first impression.
+            </p>
+
+            <h2>
+                A Cleaner and Healthier Environment
+            </h2>
+
+            <p>
+                Regular professional medical management helps ensure
+                that all aspects of healthcare delivery are optimized.
+                This includes maintaining cleanliness, safety, and compliance
+                standards. This helps create a
+                cleaner and healthier space for everyone.
+            </p>
+
+            <h2>
+                Better Presentation
+            </h2>
+
+            <p>
+            
+            </p>
+
+            <h2>
+                Saves Time and Effort
+            </h2>
+
+            <p>
+                Professional medical management allows you to focus on
+                patient care while experienced
+                professionals handle the administrative and operational aspects.
+            </p>
+
+            <h2>
+                Why Choose Brand-It Concept?
+            </h2>
+
+            <p>
+                At Brand-It Concept, we are committed to
+                providing reliable and professional medical
+                services designed around the needs of our
+                customers.
+            </p>
+
+            <p>
+                From homes and offices to larger facilities,
+                our goal is to deliver quality, comfort and
+                excellence in every service.
+            </p>
+
+        </div>
+
+
+       
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <h2>Brand-It</h2>
+
+            <span>Concept</span>
+
+            <p>
+                ...style • comfort • excellence...
+            </p>
+
+        </div>
+
+        <p>
+            © 2026 Brand-It Concept. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

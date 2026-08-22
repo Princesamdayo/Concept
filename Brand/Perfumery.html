@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfumery | Brand-It Concept</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf7;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Back Navigation */
+        .article-nav {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f1d8e3;
+
+    box-shadow: 0 3px 15px rgba(80, 20, 50, 0.08);
+}
+
+.back-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #a7194b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-blog:hover {
+    background: #7d1238;
+    transform: translateX(-4px);
+}
+
+.nav-title {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #a7194b;
+}
+
+        /* Hero */
+        .article-hero {
+            height: 420px;
+            background:
+                linear-gradient(rgba(80, 20, 55, 0.55),
+                rgba(80, 20, 55, 0.55)),
+                url("perfumery.avif") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .article-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .article-hero p {
+            font-size: 18px;
+        }
+
+        /* Article */
+        .article-container {
+            max-width: 900px;
+            margin: 70px auto;
+            padding: 0 25px;
+        }
+
+        .date {
+            color: #a83c6d;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .article-container h2 {
+            font-family: Georgia, serif;
+            font-size: 35px;
+            color: #5c2344;
+            margin-bottom: 20px;
+        }
+
+        .article-container p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        /* Benefits */
+        .benefits {
+            margin-top: 35px;
+        }
+
+        .benefits h3 {
+            font-family: Georgia, serif;
+            color: #8b285d;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .benefits ul {
+            padding-left: 25px;
+        }
+
+        .benefits li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #5c2344;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+        }
+
+        footer h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .article-hero {
+                height: 330px;
+            }
+
+            .article-hero h1 {
+                font-size: 38px;
+            }
+
+            .article-container h2 {
+                font-size: 28px;
+            }
+
+            .article-container p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Back to Blog -->
+    <header class="article-nav">
+
+        <a href="Our Service.html" class="back-blog">
+            <i class="fa-solid fa-arrow-left"></i>
+           ← Back to Our Services
+        </a>
+
+        <div class="nav-title">
+            Brand-It Concept
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="article-hero">
+        <div>
+            <h1>The Art of Perfumery</h1>
+            <p>Beautiful fragrances that create lasting impressions</p>
+        </div>
+    </section>
+
+
+    <!-- Article -->
+    <main class="article-container">
+
+        <div class="date">August 21, 2026</div>
+
+        <h2>Why Fragrance Matters</h2>
+
+        <p>
+            Fragrance is more than just a pleasant scent. It can express
+            personality, create memorable experiences and transform the
+            atmosphere of a space.
+        </p>
+
+        <p>
+            At <strong>Brand-It Concept</strong>, we believe that the right
+            fragrance adds an elegant finishing touch to your lifestyle.
+            From personal fragrances to carefully selected scents for
+            homes and special occasions, we help our clients create
+            beautiful and welcoming experiences.
+        </p>
+
+
+        <div class="benefits">
+
+            <h3>Our Perfumery Services</h3>
+
+            <ul>
+                <li> Tomford</li>
+                <li> Channel</li>
+                <li> Dune</li>
+                <li> Christian Dior</li>
+                <li> Carolina Herrari</li>
+            </ul>
+
+        </div>
+
+
+        <div class="benefits">
+
+            <h3>Why Choose Brand-It Concept?</h3>
+
+            <p>
+                We focus on quality, elegance and customer satisfaction.
+                Our goal is to help you find fragrances that complement
+                your style and create an unforgettable impression.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Brand-It Concept</h3>
+
+        <p>Style • Comfort • Excellence</p>
+
+        <p>(832) 744-0603</p>
+
+        <p>pasharon7@gmail.com</p>
+
+        <p>© 2026 Brand-It Concept. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>

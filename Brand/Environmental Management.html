@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Management | Brand-It Concept</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<style>
+
+   /* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #42152a;
+    background: #fffaf7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ /* Back Navigation */
+        .article-nav {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f1d8e3;
+
+    box-shadow: 0 3px 15px rgba(80, 20, 50, 0.08);
+}
+
+.back-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #a7194b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-blog:hover {
+    background: #7d1238;
+    transform: translateX(-4px);
+}
+
+.nav-title {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #a7194b;
+}
+/* Hero */
+        .article-hero {
+            height: 420px;
+            background:
+                linear-gradient(rgba(80, 20, 55, 0.55),
+                rgba(80, 20, 55, 0.55)),
+                url("perfumery.avif") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .article-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .article-hero p {
+            font-size: 18px;
+        }
+ /* Hero */
+        .article-hero {
+            height: 420px;
+            background:
+                linear-gradient(rgba(80, 20, 55, 0.55),
+                rgba(80, 20, 55, 0.55)),
+                url("environmental.avif") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .article-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .article-hero p {
+            font-size: 18px;
+        }
+
+
+         /* Article */
+        .article-container {
+            max-width: 900px;
+            margin: 70px auto;
+            padding: 0 25px;
+        }
+
+        .date {
+            color: #a83c6d;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .article-container h2 {
+            font-family: Georgia, serif;
+            font-size: 35px;
+            color: #5c2344;
+            margin-bottom: 20px;
+        }
+
+        .article-container p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #42152a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #f5dbe3;
+
+    margin: 10px 0;
+}
+
+.footer-contact {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 25px 0;
+}
+
+.footer-contact i {
+    color: #e85d88;
+
+    margin-right: 7px;
+}
+
+.copyright {
+    font-size: 13px;
+
+    opacity: .8;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .event-hero h1 {
+        font-size: 45px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-event {
+        grid-template-columns: 1fr;
+    }
+
+    .why-image {
+        min-height: 350px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-hero {
+        min-height: 500px;
+    }
+
+    .event-hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .why-content h2 {
+        font-size: 32px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+</style>
+
+<body>
+
+ <!-- Back to Blog -->
+    <header class="article-nav">
+
+        <a href="Our Service.html" class="back-blog">
+                        ←Back to Our Services
+        </a>
+
+        <div class="nav-title">
+            Brand-It Concept
+        </div>
+
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="article-hero">
+   
+        <div>
+            <h1>  Environmental Management</h1>
+            <p> Creating sustainable solutions with style, comfort,
+            creativity and exceptional service.</p>
+        </div>
+    </section>
+
+</section>
+
+
+ <!-- Article -->
+    <main class="article-container">
+
+        <div class="article-content">
+
+    <p class="date">August 22, 2026</p>
+
+    <h1>Why Environmental Management Matters</h1>
+
+    <p>
+        A clean, safe and well-managed environment is essential for
+        healthy living, productive workplaces and a better quality of life.
+        Proper environmental management helps reduce waste, maintain
+        cleanliness and protect the surroundings we depend on.
+    </p>
+
+    <p>
+        At <strong>Brand-It Concept</strong>, we believe that responsible
+        environmental management creates cleaner, safer and more sustainable
+        spaces. We provide practical solutions designed to help homes,
+        businesses and facilities maintain a healthy and pleasant environment.
+    </p>
+    <br> <br>
+
+    <h2>Our Environmental Management Services</h2>
+
+    <ul>
+        <li>Waste Management</li>
+        <li>Facility & Environmental Cleaning</li>
+        <li>Proper Waste Disposal</li>
+        <li>Environmental Maintenance</li>
+        <li>Sanitation & Hygiene Support</li>
+        <li>Recycling & Waste Reduction</li>
+        <li>Environmental Awareness</li>
+    </ul>
+
+    <br> <br>
+
+    <h2>Why Choose Brand-It Concept?</h2>
+
+    <p>
+        We focus on professionalism, reliability and attention to detail.
+        Our goal is to help clients maintain clean and well-managed
+        environments while promoting healthier and more sustainable spaces.
+    </p>
+
+</div>
+    </main>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>Brand-It Concept</h2>
+
+    <p>
+        Style • Comfort • Excellence
+    </p>
+
+    <div class="footer-contact">
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            (832) 744-0603
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            pasharon7@gmail.com
+        </span>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Brand-It Concept. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
