@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Professional Housekeeping | Brand-It Concept</title>
+
+    <link rel="stylesheet" href="article.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<style>
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff9fb;
+    color: #333;
+}
+
+
+/* =========================
+   BACK TO BLOG NAVIGATION
+========================= */
+
+.article-nav {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f1d8e3;
+
+    box-shadow: 0 3px 15px rgba(80, 20, 50, 0.08);
+}
+
+.back-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #a7194b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-blog:hover {
+    background: #7d1238;
+    transform: translateX(-4px);
+}
+
+.nav-title {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #a7194b;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+.article-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 40px rgba(80, 20, 50, 0.08);
+}
+
+ .article-hero {
+
+            height: 420px;
+
+            background:
+                linear-gradient(
+                    rgba(70, 30, 50, 0.50),
+                    rgba(70, 30, 50, 0.50)
+                ),
+                url("house keeping.avif")
+                center/cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 30px;
+        }
+
+        .article-hero h1 {
+
+            font-family: Georgia, serif;
+
+            font-size: 55px;
+
+            margin-bottom: 15px;
+            
+            color: white;
+        }
+
+        .article-hero p {
+
+            font-size: 18px;
+        }
+
+
+.article-content {
+    padding: 50px 8%;
+}
+
+.article-category {
+    color: #a7194b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.article-date {
+    margin-top: 12px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+h1 {
+    margin-top: 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    line-height: 1.2;
+
+    color: #40152b;
+}
+
+.intro {
+    margin-top: 25px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #666;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+    font-family: Georgia, serif;
+
+    color: #a7194b;
+
+    font-size: 28px;
+}
+
+.article-content p {
+    line-height: 1.8;
+
+    font-size: 16px;
+
+    color: #555;
+
+    margin-bottom: 18px;
+}
+
+.article-content ul {
+    margin: 20px 0 30px 25px;
+}
+
+.article-content li {
+    margin-bottom: 12px;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   QUOTE BUTTON
+========================= */
+
+.quote-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 15px 25px;
+
+    background: #a7194b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.quote-button:hover {
+    background: #7d1238;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #40152b;
+
+    color: white;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+
+    color: #f5dce7;
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .article-nav {
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .back-blog {
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+
+    .nav-title {
+        font-size: 18px;
+    }
+
+    .article-container {
+        width: 94%;
+
+        margin: 30px auto;
+    }
+
+    .article-image {
+        height: 300px;
+    }
+
+    .article-content {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+}
+</style>
+
+<body>
+
+    <!-- BACK TO BLOG NAVIGATION -->
+    <header class="article-nav">
+
+        <a href="Our Service.html" class="back-blog">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Our Services
+        </a>
+
+        <div class="nav-title">
+            Brand-It Concept
+        </div>
+
+    </header>
+
+
+    <!-- ARTICLE -->
+    <main class="article-container">
+
+         <section class="article-hero">
+
+        <div>
+
+            <h1>
+               Professional House Keeping Services
+            </h1>
+
+            <p>
+                Fresh, spotless and beautifully maintained spaces for homes and businesses.
+            </p>
+
+        </div>
+
+    </section>
+       
+
+        <div class="article-content">
+
+            <span class="article-category">
+                HOUSE KEEPING
+            </span>
+
+            <p class="article-date">
+                August 9, 2026
+            </p>
+
+            <h1>
+                Professional Housekeeping for a Comfortable Home
+            </h1>
+
+            <p class="intro">
+                A clean and well-organized environment creates comfort,
+                improves productivity and makes your home or workplace
+                more enjoyable.
+            </p>
+
+            <h2>
+                Why Professional Housekeeping Matters
+            </h2>
+
+            <p>
+                At Brand-It Concept, we provide professional housekeeping
+                services designed to keep homes, offices and other spaces
+                clean, organized and welcoming.
+            </p>
+
+            <p>
+                Our team pays attention to the details that make a
+                difference, from maintaining clean rooms and bathrooms
+                to keeping living and working spaces neat and comfortable.
+            </p>
+
+            <h2>
+                Our Housekeeping Services
+            </h2>
+
+            <ul>
+                <li>General house cleaning</li>
+                <li>Office and facility cleaning</li>
+                <li>Bedroom and living-area cleaning</li>
+                <li>Bathroom cleaning</li>
+                <li>Kitchen cleaning</li>
+                <li>Dusting and surface cleaning</li>
+                <li>Deep cleaning</li>
+                <li>Regular housekeeping maintenance</li>
+            </ul>
+
+            <h2>
+                Clean Space, Better Living
+            </h2>
+
+            <p>
+                We believe that a clean environment contributes to
+                comfort, confidence and peace of mind. Our goal is to
+                provide reliable housekeeping services that meet the
+                needs of every client.
+            </p>
+
+            
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>Brand-It Concept</h3>
+
+        <p>
+            Style • Comfort • Excellence
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            (832) 744-0603
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            pasharon7@gmail.com
+        </p>
+
+        <p class="copyright">
+            © 2026 Brand-It Concept. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
